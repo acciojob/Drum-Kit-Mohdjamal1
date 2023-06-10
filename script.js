@@ -14,8 +14,11 @@ const sounds = {
 function playSound(key) {
   const soundFile = sounds[key];
   if (soundFile) {
-    const audio = new Audio(soundFile);
+	  fetch(url).then((response)=> response)
+	  .then((file)=>{
+    const audio = new Audio(file);
     audio.play();
+	});
   }
 
 document.addEventListener('keydown', function(event) {
